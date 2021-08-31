@@ -30,10 +30,11 @@
                 placeholder="Password"
               />
             </div>
-
-            <button class="btn btn-lg btn-block " @click.prevent="login">
-              Login
-            </button>
+            <router-link to="/merchant">
+              <button class="btn btn-lg btn-block ">
+                Login
+              </button>
+            </router-link>
           </form>
         </div>
         <div class="col-md-3"></div>
@@ -60,42 +61,43 @@ export default {
         password: this.password,
       };
       console.log(":: log ::", form);
+
       //   try{
-      var qs = require("qs");
-      var data = qs.stringify({
-        login: form.login,
-        password: form.password,
-      });
-      var config = {
-        method: "post",
-        url: "http://197.253.19.78:2001/api/user/login",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        data: data,
-      };
+      // var qs = require("qs");
+      // var data = qs.stringify({
+      //   login: form.login,
+      //   password: form.password,
+      // });
+      // var config = {
+      //   method: "post",
+      //   url: "http://197.253.19.78:2001/api/user/login",
+      //   headers: {
+      //     "Content-Type": "application/x-www-form-urlencoded",
+      //   },
+      //   data: data,
+      // };
 
-      this.axios(config)
-        .then(function(response) {
-          console.log(JSON.stringify(response.data));
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+      // this.axios(config)
+      //   .then(function(response) {
+      //     console.log(JSON.stringify(response.data));
+      //   })
+      //   .catch(function(error) {
+      //     console.log(error);
+      //   });
 
-    //   this.axios
-    //     .post(this.baseURL, form, {
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //     })
-    //     .then((res) => {
-    //       console.log(res.json());
-    //     })
-    //     .catch((err) => {
-    //       console.log(err.response);
-    //     });
-    //   console.log(this.username, this.password);
+      //   this.axios
+      //     .post(this.baseURL, form, {
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //       },
+      //     })
+      //     .then((res) => {
+      //       console.log(res.json());
+      //     })
+      //     .catch((err) => {
+      //       console.log(err.response);
+      //     });
+      //   console.log(this.username, this.password);
 
       //   const user= await this.axios.post(this.baseURL,form,{headers: {
       //        }   // remove headers

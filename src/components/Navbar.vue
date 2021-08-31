@@ -3,12 +3,12 @@
   <!-- Image and text -->
   <nav class="navbar">
     <div class="navbar-brand">
-      <img class="brand-logo  img-fluid" src="../../../logo.png" />
+      <img class="brand-logo  img-fluid" src="../assets/logo.png" />
       <p>Terminal Management System</p>
     </div>
 
     <div class="profile">
-      <img class="profile-image" src="../../../user.svg" />
+      <img class="profile-image" src="../assets/user.svg" />
       <p
         class="nav-link dropdown-toggle"
         href="#"
@@ -24,7 +24,7 @@
 </template>
 <script>
 export default {
-  setup() {},
+  name: "Navbar",
 };
 </script>
 

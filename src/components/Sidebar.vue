@@ -2,19 +2,19 @@
   <!-- sidebar -->
   <div class="sidebar">
     <div class="menu-items">
-      <router-link to="/merchant" active-class="active"  class="side-btn">
+      <router-link to="/merchant" active-class="active" class="side-btn">
         <div class="link-container">Merchant</div>
       </router-link>
-      <router-link to="/terminal" active-class="active"  class="side-btn">
+      <router-link to="/terminal" active-class="active" class="side-btn">
         <div class="link-container">Terminal</div>
       </router-link>
-      <router-link to="/application" active-class="active"  class="side-btn">
+      <router-link to="/application" active-class="active" class="side-btn">
         <div class="link-container">Application</div>
       </router-link>
-      <router-link to="/model" active-class="active"  class="side-btn">
+      <router-link to="/model" active-class="active" class="side-btn">
         <div class="link-container">Model</div>
       </router-link>
-      <router-link to="/capk" active-class="active"  class="side-btn">
+      <router-link to="/capk" active-class="active" class="side-btn">
         <div class="link-container">CAPK</div>
       </router-link>
     </div>
@@ -22,12 +22,11 @@
 </template>
 <script>
 export default {
-  name: 'sidebar'
-}
+  name: "Sidebar",
+};
 </script>
 
 <style scoped>
-
 .sidebar {
   position: fixed;
   width: 150px;
@@ -42,16 +41,14 @@ export default {
   flex-direction: column;
   margin-top: 10px;
   margin-left: 15px;
-  
 }
 
 .side-btn.active {
   position: relative;
-  background-color: white ;
+  background-color: white;
   border-radius: 30px 0px 0px 30px;
   height: 40px;
   color: #4b709a;
- 
 }
 .side-btn {
   padding: 10px 25px;

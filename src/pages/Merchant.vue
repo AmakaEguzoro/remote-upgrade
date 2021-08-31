@@ -1,8 +1,5 @@
 <template>
   <div>
-    <navbar />
-    <sidebar />
-
     <!-- main dashboard -->
     <main>
       <div class="dashboard-container">
@@ -39,26 +36,36 @@
       <div class="flexicon">
         <ul>
           <li>
-            <img class="flexicon-image img-responsive" src="../../../web.svg" /><a>View</a>
+            <img
+              class="flexicon-image img-responsive"
+              src="../assets/web.svg"
+            /><a>View</a>
+          </li>
+          <li @click="callModal('addMerchant', { msg: 'msg' })">
+            <img
+              class="flexicon-image img-responsive"
+              src="../assets/ui.svg"
+            /><a>Add</a>
           </li>
           <li>
-            <img class="flexicon-image img-responsive" src="../../../ui.svg" /><a>Add</a>
+            <img
+              class="flexicon-image img-responsive"
+              src="../assets/archive.svg"
+            /><a>Edit</a>
           </li>
           <li>
-            <img class="flexicon-image img-responsive" src="../../../archive.svg" /><a>Edit</a>
+            <img
+              class="flexicon-image img-responsive"
+              src="../assets/rubbish.svg"
+            /><a>Delete</a>
           </li>
           <li>
-            <img class="flexicon-image img-responsive" src="../../../rubbish.svg" /><a
-              >Delete</a
-            >
-          </li>
-          <li>
-            <img class="flexicon-image" src="../../../arrows.svg" /><a
+            <img class="flexicon-image" src="../assets/arrows.svg" /><a
               >Import</a
             >
           </li>
           <li>
-            <img class="flexicon-image" src="../../../arrows.svg" /><a
+            <img class="flexicon-image" src="../assets/arrows.svg" /><a
               >Export</a
             >
           </li>
@@ -105,13 +112,32 @@
 </template>
 
 <script>
-import Navbar from "./Navbar.vue";
-import Sidebar from "./Sidebar.vue";
-
+import addMerchant from "../pages/addMerchant.vue";
+import editMerchant from "../pages/editMerchant.vue";
 export default {
-  components: {
-    Navbar,
-    Sidebar,
+  name: "Merchant",
+  data() {
+    return {
+      add: "",
+    };
+  },
+  components: {},
+  methods: {
+    callModal(name, { msg }) {
+      switch (name) {
+        case "addMerchant":
+          name = addMerchant;
+          break;
+        case "edit":
+          name = editMerchant;
+          break;
+      }
+      this.$modal.show(
+        name,
+        { msg: msg },
+        { adaptive: true, draggable: false, width: "70%", clickToClose: true }
+      );
+    },
   },
 };
 </script>
@@ -241,6 +267,5 @@ main {
   opacity: 1;
   height: 50%;
   margin-top: 33px;
- 
 }
 </style>

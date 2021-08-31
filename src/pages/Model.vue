@@ -1,25 +1,21 @@
 <template>
   <div>
-    <navbar />
-    <sidebar />
+   
 
     <!-- main dashboard -->
-    <main>
+    <div>
       <div class="dashboard-container">
         <!-- SEARCH -->
         <div class="row search">
           <!-- search by id -->
-          <div class="col-md-6 terminal-search">
+          <div class="col-md-3 terminal-search">
             <div class="terminal-id">
-              <p>Terminal ID</p>
-              <input type="text" class="search-ID" placeholder="3473*******" />
-            </div>
-
-            <div class="terminal-model">
               <p>Model</p>
-              <input type="text" class="search-model" placeholder="All Model" />
+              <input type="text" class="search-ID" placeholder="ITEX" />
             </div>
           </div>
+
+          <div class="col-md-3"></div>
 
           <!-- filter -->
           <div class="col-md-6 filter">
@@ -42,42 +38,21 @@
         <br />
         <!-- modals -->
         <div class="flexicon">
-         <ul>
+          <ul>
             <li>
-              <img class="flexicon-image" src="../../../web.svg" /><a>View</a>
+              <img class="flexicon-image" src="../assets/rubbish.svg" /><a
+                >Delete</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../ui.svg" /><a>Add</a>
+              <img class="flexicon-image" src="../assets/arrows.svg" /><a
+                >Import</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../archive.svg" /><a>Edit</a>
-            </li>
-            <li>
-              <img class="flexicon-image" src="../../../rubbish.svg" /><a>Delete</a>
-            </li>
-            <li>
-              <img class="flexicon-image" src="../../../open.svg" /><a>Enable</a>
-            </li>
-            <li>
-              <img class="flexicon-image" src="../../../closed.svg" /><a>Disable</a>
-            </li>
-            <li>
-              <img class="flexicon-image" src="../../../copy.svg" /><a>Copy</a>
-            </li>
-            <li>
-              <img class="flexicon-image" src="../../../files.svg" /><a>Batch Deploy</a>
-            </li>
-            <li>
-              <img class="flexicon-image" src="../../../arrows.svg" /><a>Import</a>
-            </li>
-            <li>
-              <img class="flexicon-image" src="../../../arrows.svg" /><a>Export</a>
-            </li>
-            <li>
-              <img class="flexicon-image" src="../../../interface.svg" /><a>Schedule</a>
-            </li>
-            <li>
-              <img class="flexicon-image" src="../../../computer.svg" /><a>Restore</a>
+              <img class="flexicon-image" src="../assets/arrows.svg" /><a
+                >Export</a
+              >
             </li>
           </ul>
         </div>
@@ -94,12 +69,9 @@
                 <label for="selectAll"></label>
               </span>
             </th>
-            <th>Terminal ID</th>
-            <th>Model</th>
-            <th>Status</th>
-            <th>Download SN</th>
-            <th>Last Download Time</th>
-            <th>Download Status</th>
+            <th>Model Name</th>
+            <th>Terminal os Platform</th>
+            <th>Update By</th>
             <th>Update Time</th>
           </tr>
         </thead>
@@ -113,26 +85,20 @@
               </span>
             </td>
             <td>D210</td>
-            <td>ITEX integrated</td>
+            <td>iTEX integrated</td>
             <td></td>
             <td>Pax</td>
-            <td></td>
-            <td></td>
-            <td></td>
           </tr>
         </tbody>
       </table>
-    </main>
+    </div>
   </div>
 </template>
 
 <script>
-import Navbar from "./Navbar.vue";
-import Sidebar from "./Sidebar.vue";
 
 export default {
-  name:"Terminal",
-  components: { Navbar, Sidebar },
+
 };
 </script>
 
@@ -151,40 +117,36 @@ main {
   background-color: #fff;
   opacity: 1;
   margin-bottom: 10px;
-  
-  
 }
-.flexicon ul{
+.flexicon ul {
   list-style-type: none;
   display: flex;
   color: #5dcc96;
   cursor: pointer;
 }
-.flexicon li{
-  margin-right: 30px;
-  margin-top: 5px;
+.flexicon li {
+  margin-right: 20px;
 }
 .flexicon a {
-  /* margin: 10px;   */
+  float: left;
+  margin: 10px;
   font-size: 12px;
-  margin-top: 10px;
 }
 
 .flexicon-image {
   width: 15px;
   height: 15px;
-  /* margin-bottom: -10px; */
+  margin-bottom: -10px;
 }
-
 .table {
   width: 100%;
-  border: 2px solid #4B709A;
+  border: 2px solid #4b709a;
   opacity: 1;
 }
 .table th {
   border: 2px solid #4b709a;
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
   color: #4b709a;
   height: 30px;
 }
