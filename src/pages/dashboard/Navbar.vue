@@ -44,7 +44,7 @@ export default {
 }
 
 .brand-logo {
-  width: 120px;
+  width: 50%;
   height: auto;
 }
 .profile {
@@ -56,7 +56,7 @@ export default {
   color: #4b709a;
 }
 .profile-image {
-  width: 29px;
-  height: 29px;
+  width: 29%;
+  /* height: 29px; */
 }
 </style>

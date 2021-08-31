@@ -42,18 +42,44 @@
         <br />
         <!-- modals -->
         <div class="flexicon">
-          <p>View</p>
-          <p>Add</p>
-          <p>Edit</p>
-          <p>Delete</p>
-          <p>Enable</p>
-          <p>Disable</p>
-          <p>Copy</p>
-          <p>Batch Deploy</p>
-          <p>Import</p>
-          <p>Export</p>
-          <p>Schedule</p>
-          <p>Restore</p>
+         <ul>
+            <li>
+              <img class="flexicon-image" src="../../../web.svg" /><a>View</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../ui.svg" /><a>Add</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../archive.svg" /><a>Edit</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../rubbish.svg" /><a>Delete</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../open.svg" /><a>Enable</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../closed.svg" /><a>Disable</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../copy.svg" /><a>Copy</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../files.svg" /><a>Batch Deploy</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../arrows.svg" /><a>Import</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../arrows.svg" /><a>Export</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../interface.svg" /><a>Schedule</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../computer.svg" /><a>Restore</a>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -87,7 +113,7 @@
               </span>
             </td>
             <td>D210</td>
-            <td>iTEX integrated</td>
+            <td>ITEX integrated</td>
             <td></td>
             <td>Pax</td>
             <td></td>
@@ -118,22 +144,36 @@ main {
 }
 
 .flexicon {
-  display: flex;
-  justify-content: space-between;
   height: 40px;
   width: 100%;
   border: 2px solid #4b6f99;
   border-radius: 4px;
-  margin-bottom: 10px;
   background-color: #fff;
   opacity: 1;
+  margin-bottom: 10px;
+  
+  
 }
-.flexicon p {
-  float: left;
-  margin: 10px;
+.flexicon ul{
+  list-style-type: none;
+  display: flex;
   color: #5dcc96;
-  margin-top: 8px;
+  cursor: pointer;
+}
+.flexicon li{
+  margin-right: 30px;
+  margin-top: 5px;
+}
+.flexicon a {
+  /* margin: 10px;   */
   font-size: 12px;
+  margin-top: 10px;
+}
+
+.flexicon-image {
+  width: 15px;
+  height: 15px;
+  /* margin-bottom: -10px; */
 }
 
 .table {

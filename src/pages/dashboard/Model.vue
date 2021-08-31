@@ -39,9 +39,19 @@
         <br />
         <!-- modals -->
         <div class="flexicon">
-          <p>Delete</p>
-          <p>Import</p>
-          <p>Export</p>
+          <ul>
+            
+            <li>
+              <img class="flexicon-image" src="../../../rubbish.svg" /><a>Delete</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../arrows.svg" /><a>Import</a>
+            </li>
+            <li>
+              <img class="flexicon-image" src="../../../arrows.svg" /><a>Export</a>
+            </li>
+          </ul>
+          
         </div>
       </div>
 
@@ -99,24 +109,36 @@ main {
 }
 
 .flexicon {
-  justify-content: space-between;
   height: 40px;
   width: 100%;
-  padding-left: 50px;
   border: 2px solid #4b6f99;
   border-radius: 4px;
-  margin-bottom: 10px;
   background-color: #fff;
   opacity: 1;
+  margin-bottom: 10px;
+  
+  
 }
-.flexicon p {
-  float: left;
-  margin: 10px;
+.flexicon ul{
+  list-style-type: none;
+  display: flex;
   color: #5dcc96;
-  margin-top: 8px;
+  cursor: pointer;
+}
+.flexicon li{
+  margin-right: 20px;
+}
+.flexicon a {
+  float: left;
+  margin: 10px;  
   font-size: 12px;
 }
 
+.flexicon-image {
+  width: 15px;
+  height: 15px;
+  margin-bottom: -10px;
+}
 .table {
   width: 100%;
   border: 2px solid #4B709A;

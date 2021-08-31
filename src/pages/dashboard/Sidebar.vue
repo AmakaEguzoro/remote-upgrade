@@ -2,19 +2,19 @@
   <!-- sidebar -->
   <div class="sidebar">
     <div class="menu-items">
-      <router-link to="/merchant" active-class="active" tag="button" class="side-btn">
+      <router-link to="/merchant" active-class="active"  class="side-btn">
         <div class="link-container">Merchant</div>
       </router-link>
-      <router-link to="/terminal" active-class="active" tag="button" class="side-btn">
+      <router-link to="/terminal" active-class="active"  class="side-btn">
         <div class="link-container">Terminal</div>
       </router-link>
-      <router-link to="/application" active-class="active" tag="button" class="side-btn">
+      <router-link to="/application" active-class="active"  class="side-btn">
         <div class="link-container">Application</div>
       </router-link>
-      <router-link to="/model" active-class="active" tag="button" class="side-btn">
+      <router-link to="/model" active-class="active"  class="side-btn">
         <div class="link-container">Model</div>
       </router-link>
-      <router-link to="/capk" active-class="active" tag="button" class="side-btn">
+      <router-link to="/capk" active-class="active"  class="side-btn">
         <div class="link-container">CAPK</div>
       </router-link>
     </div>

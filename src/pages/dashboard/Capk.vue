@@ -122,11 +122,9 @@ main {
   opacity: 1;
 }
 .display-cards {
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
-/* .display-cards p{
-  font-size: 10px;
-} */
+
 .label {
   color: #707070;
   font-size: 9px;
