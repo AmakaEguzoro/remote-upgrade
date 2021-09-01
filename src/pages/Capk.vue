@@ -1,9 +1,8 @@
 <template>
   <div>
-    <navbar />
-    <sidebar />
+  
 
-    <main >
+    <main>
       <div class="row display-cards">
         <div class="card master-card col-md-3">
           <p class="label">Number of terminals supported</p>
@@ -46,7 +45,7 @@
           <button class="btn btn-lg btn-block">Add Card Scheme</button>
         </div>
       </div>
-      <br>
+      <br />
       <!-- table -->
       <table class="table table-striped">
         <!-- table head -->
@@ -97,12 +96,10 @@
 </template>
 
 <script>
-import Navbar from "./Navbar.vue";
-import Sidebar from "./Sidebar.vue";
 
 export default {
-  name: 'Capk',
-  components: { Navbar, Sidebar },
+  name: "Capk",
+  components: {  },
 };
 </script>
 <style scoped>
@@ -188,12 +185,12 @@ main {
 
 .table {
   width: 100%;
-  border: 1px solid #C7C7C7;
+  border: 1px solid #c7c7c7;
   border-radius: 4px;
   opacity: 1;
 }
 .table th {
-  border: 1px solid #C7C7C7;
+  border: 1px solid #c7c7c7;
   text-align: center;
   font-size: 10px;
   color: #c7c7c7;
@@ -202,9 +199,8 @@ main {
   text-align: left;
   font-size: 10px;
   letter-spacing: 0px;
-  color: #253A66;
+  color: #253a66;
   text-transform: uppercase;
   opacity: 0.77;
 }
-
 </style>

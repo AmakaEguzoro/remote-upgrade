@@ -1,8 +1,5 @@
 <template>
   <div>
-    <navbar />
-    <sidebar />
-
     <!-- main dashboard -->
     <main>
       <div class="dashboard-container">
@@ -39,42 +36,60 @@
         <br />
         <!-- modals -->
         <div class="flexicon">
-         <ul>
+          <ul>
             <li>
-              <img class="flexicon-image" src="../../../web.svg" /><a>View</a>
+              <img class="flexicon-image" src="../assets/web.svg" /><a>View</a>
             </li>
             <li>
-              <img class="flexicon-image" src="../../../ui.svg" /><a>Add</a>
+              <img class="flexicon-image" src="../assets/ui.svg" /><a>Add</a>
             </li>
             <li>
-              <img class="flexicon-image" src="../../../archive.svg" /><a>Edit</a>
+              <img class="flexicon-image" src="../assets/archive.svg" /><a
+                >Edit</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../rubbish.svg" /><a>Delete</a>
+              <img class="flexicon-image" src="../assets/rubbish.svg" /><a
+                >Delete</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../open.svg" /><a>Enable</a>
+              <img class="flexicon-image" src="../assets/open.svg" /><a
+                >Enable</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../closed.svg" /><a>Disable</a>
+              <img class="flexicon-image" src="../assets/closed.svg" /><a
+                >Disable</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../copy.svg" /><a>Copy</a>
+              <img class="flexicon-image" src="../assets/copy.svg" /><a>Copy</a>
             </li>
             <li>
-              <img class="flexicon-image" src="../../../files.svg" /><a>Batch Deploy</a>
+              <img class="flexicon-image" src="../assets/files.svg" /><a
+                >Batch Deploy</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../arrows.svg" /><a>Import</a>
+              <img class="flexicon-image" src="../assets/arrows.svg" /><a
+                >Import</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../arrows.svg" /><a>Export</a>
+              <img class="flexicon-image" src="../assets/arrows.svg" /><a
+                >Export</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../interface.svg" /><a>Schedule</a>
+              <img class="flexicon-image" src="../assets/interface.svg" /><a
+                >Schedule</a
+              >
             </li>
             <li>
-              <img class="flexicon-image" src="../../../computer.svg" /><a>Restore</a>
+              <img class="flexicon-image" src="../assets/computer.svg" /><a
+                >Restore</a
+              >
             </li>
           </ul>
         </div>
@@ -126,11 +141,8 @@
 </template>
 
 <script>
-import Navbar from "./Navbar.vue";
-import Sidebar from "./Sidebar.vue";
-
 export default {
-  components: { Navbar, Sidebar },
+  components: {},
 };
 </script>
 
@@ -149,16 +161,14 @@ main {
   background-color: #fff;
   opacity: 1;
   margin-bottom: 10px;
-  
-  
 }
-.flexicon ul{
+.flexicon ul {
   list-style-type: none;
   display: flex;
   color: #5dcc96;
   cursor: pointer;
 }
-.flexicon li{
+.flexicon li {
   margin-right: 30px;
   margin-top: 5px;
 }
@@ -174,7 +184,7 @@ main {
 
 .table {
   width: 100%;
-  border: 2px solid #4B709A;
+  border: 2px solid #4b709a;
   opacity: 1;
 }
 .table th {
