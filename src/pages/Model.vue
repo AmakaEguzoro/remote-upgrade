@@ -3,35 +3,39 @@
    
 
     <!-- main dashboard -->
+    <main>
     <div>
       <div class="dashboard-container">
         <!-- SEARCH -->
         <div class="row search">
           <!-- search by id -->
-          <div class="col-md-3 terminal-search">
-            <div class="terminal-id">
-              <p>Model</p>
-              <input type="text" class="search-ID" placeholder="ITEX" />
-            </div>
+          <div class="col-md-3 model-search">
+            Model          
+            <select name="model" id="model" class="form-control input-model ">
+              <option value="select Country" class="dropdown">D210</option>
+              <option value="Nigeria" class="dropdown-option">F456</option>
+              <option value="Ghana" class="dropdown-option">S347</option>
+              <option value="Togo" class="dropdown-option">D312</option>
+            </select>
           </div>
 
           <div class="col-md-3"></div>
 
           <!-- filter -->
           <div class="col-md-6 filter">
-            <div class="merchant-contact">
-              <p>Model</p>
-              <input type="text" class="search-contact" />
+            <div class="model-number col">
+              Model
+              <input type="text" class="search-number" />
             </div>
-            <div class="merchant-name">
-              <p>Model Name</p>
+            <div class="merchant-name col">
+              Version
               <input type="text" class="search-name" />
             </div>
-            <div class="merchant-status">
-              <p>Status</p>
+            <div class="merchant-status col">
+              Status
               <input type="text" class="search-status" />
             </div>
-            <button class="btn btn-lg btn-block">Filter</button>
+            <button class="btn btn-lg btn-block col">Filter</button>
           </div>
         </div>
 
@@ -92,13 +96,14 @@
         </tbody>
       </table>
     </div>
+    </main>
   </div>
 </template>
 
 <script>
 
 export default {
-
+    
 };
 </script>
 
@@ -155,41 +160,26 @@ main {
   font-size: 12px;
 }
 
-.terminal-search {
-  display: flex;
-}
 
-.search-ID {
-  width: 150px;
-  height: 30px;
-  margin-top: -7px;
-  box-sizing: border-box;
-  border: 2px solid #4b709a;
-  border-radius: 4px;
-  opacity: 1;
-}
 
-.terminal-search ::placeholder {
-  color: #4b709a;
-  font-size: 10px;
-  padding-left: 10px;
-}
-
-.terminal-id {
-  color: #4b709a;
+.input-model {
+ width: 200px;
+  height: 35px;
   font-size: 12px;
-  margin-right: 20px;
-}
-
-.search-model {
-  width: 120px;
-  height: 30px;
-  margin-top: -7px;
+  color: #4b709a;
   box-sizing: border-box;
   border: 2px solid #4b709a;
   border-radius: 4px;
   opacity: 1;
 }
+
+
+.model-search {
+  color: #4b709a;
+  font-size: 15px;
+}
+
+
 
 .terminal-model {
   color: #4b709a;
@@ -201,25 +191,23 @@ main {
   justify-content: space-between;
   float: right;
 }
-.search-contact {
-  width: 110px;
-  height: 30px;
-  margin-top: -7px;
+.search-number {
+  width: 120px;
+  height: 40px;
   box-sizing: border-box;
   border: 2px solid #4b709a;
   border-radius: 4px;
   opacity: 1;
 }
 
-.merchant-contact {
+.model-number {
   color: #4b709a;
   font-size: 12px;
 }
 
 .search-name {
-  width: 110px;
-  height: 30px;
-  margin-top: -7px;
+  width: 150px;
+  height: 40px;
   box-sizing: border-box;
   border: 2px solid #4b709a;
   border-radius: 4px;
@@ -232,9 +220,8 @@ main {
 }
 
 .search-status {
-  width: 80px;
-  height: 30px;
-  margin-top: -7px;
+  width: 100px;
+  height: 40px;
   box-sizing: border-box;
   border: 2px solid #4b709a;
   border-radius: 4px;
@@ -253,7 +240,7 @@ main {
   margin-top: 27px;
   border-radius: 4px;
   opacity: 1;
-  height: 30px;
+  height: 40px;
   width: 80px;
 }
 </style>

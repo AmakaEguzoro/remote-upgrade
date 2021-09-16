@@ -37,13 +37,13 @@
         <!-- modals -->
         <div class="flexicon">
           <ul>
-            <li>
+            <li @click="callModal('viewApplication', { msg: 'msg' })">
               <img class="flexicon-image" src="../assets/web.svg" /><a>View</a>
             </li>
-            <li>
+            <li @click="callModal('addApplication', { msg: 'msg' })">
               <img class="flexicon-image" src="../assets/ui.svg" /><a>Add</a>
             </li>
-            <li>
+            <li @click="callModal('editApplication', { msg: 'msg' })">
               <img class="flexicon-image" src="../assets/archive.svg" /><a
                 >Edit</a
               >
@@ -141,8 +141,37 @@
 </template>
 
 <script>
+import addApplication from "../pages/addApplication.vue";
+import editApplication from "../pages/editApplication.vue";
+import viewApplication from "../pages/viewApplication.vue";
 export default {
+  name: "Application",
+  data() {
+    return {
+      add: "",
+    };
+  },
   components: {},
+  methods: {
+    callModal(name, { msg }) {
+      switch (name) {
+        case "addApplication":
+          name = addApplication;
+          break;
+        case "editApplication":
+          name = editApplication;
+          break;
+          case "viewApplication":
+          name = viewApplication;
+          break;
+      }
+      this.$modal.show(
+        name,
+        { msg: msg },
+        { adaptive: true, draggable: false, width: "60%", height: "90%", clickToClose: true }
+      );
+    },
+  },
 };
 </script>
 

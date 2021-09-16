@@ -6,27 +6,33 @@
         <!-- SEARCH -->
         <div class="row search">
           <!-- search by id -->
-          <div class="col-md-3 merchant-id">
-            <p>Merchant ID</p>
-            <input type="text" class="search-merchant" />
+          <div class="col-md-3 merchant-id"> 
+            <p>Merchant ID</p>          
+            <select name="organisation" id="organisation" class="form-control input-organisation ">
+              <option value="select Country" class="dropdown">-Select ID-</option>
+              <option value="Nigeria" class="dropdown-option">ITEX</option>
+              <option value="Ghana" class="dropdown-option">Ghana</option>
+              <option value="Togo" class="dropdown-option">Togo</option>
+            </select>
+         
           </div>
 
           <div class="col-md-3"></div>
           <!-- filter -->
           <div class="col-md-6 filter">
-            <div class="merchant-contact">
+            <div class="merchant-contact col">
               <p>Contact</p>
               <input type="text" class="search-contact" />
             </div>
-            <div class="merchant-name">
+            <div class="merchant-name col">
               <p>Merchant Name</p>
               <input type="text" class="search-name" />
             </div>
-            <div class="merchant-status">
+            <div class="merchant-status col">
               <p>Status</p>
               <input type="text" class="search-status" />
             </div>
-            <button class="btn btn-lg ">Filter</button>
+            <button class="btn btn-lg col ">Filter</button>
           </div>
         </div>
       </div>
@@ -35,7 +41,7 @@
       <!-- modals  -->
       <div class="flexicon">
         <ul>
-          <li>
+          <li @click="callModal('viewMerchant', { msg: 'msg' })">
             <img
               class="flexicon-image img-responsive"
               src="../assets/web.svg"
@@ -47,7 +53,7 @@
               src="../assets/ui.svg"
             /><a>Add</a>
           </li>
-          <li>
+          <li @click="callModal('editMerchant', { msg: 'msg' })">
             <img
               class="flexicon-image img-responsive"
               src="../assets/archive.svg"
@@ -71,10 +77,11 @@
           </li>
         </ul>
       </div>
-
+      
       <!-- table -->
-      <div class="table-responsive">
-        <table class="table">
+      
+      <div class="table-responsive" id="app">
+        <table class="table" >
           <!-- table head -->
           <thead>
             <tr>
@@ -92,7 +99,7 @@
           </thead>
           <!-- table body -->
           <tbody>
-            <tr>
+            <tr >
               <td>
                 <span>
                   <input type="checkbox" id="selectAll" />
@@ -100,9 +107,9 @@
                 </span>
               </td>
               <td>D210</td>
-              <td>ITEX integrated</td>
+              <td>Cosmetic Intelligence</td>
               <td></td>
-              <td>Pax</td>
+              <td>PAX</td>
             </tr>
           </tbody>
         </table>
@@ -114,8 +121,10 @@
 <script>
 import addMerchant from "../pages/addMerchant.vue";
 import editMerchant from "../pages/editMerchant.vue";
+import viewMerchant from "../pages/viewMerchant.vue";
 export default {
-  name: "Merchant",
+  name: "Merchant", 
+
   data() {
     return {
       add: "",
@@ -128,17 +137,21 @@ export default {
         case "addMerchant":
           name = addMerchant;
           break;
-        case "edit":
+        case "editMerchant":
           name = editMerchant;
+          break;
+        case "viewMerchant":
+          name = viewMerchant;
           break;
       }
       this.$modal.show(
         name,
         { msg: msg },
-        { adaptive: true, draggable: false, width: "70%", clickToClose: true }
+        { adaptive: true, draggable: false, width: "60%", height: "100%", clickToClose: true }
       );
     },
   },
+  
 };
 </script>
 
@@ -198,9 +211,11 @@ main {
   font-size: 12px;
 }
 
-.search-merchant {
-  width: 80%;
-  height: 50%;
+.input-organisation {
+  width: 200px;
+  height: 35px;
+  font-size: 12px;
+  color: #4b709a;
   box-sizing: border-box;
   border: 2px solid #4b709a;
   border-radius: 4px;
@@ -209,17 +224,18 @@ main {
 
 .merchant-id {
   color: #4b709a;
-  font-size: 12px;
+  font-size: 15px;
+  
 }
 
 .filter {
   display: flex;
-  justify-content: space-between;
+  
   float: right;
 }
 .search-contact {
-  width: 80%;
-  height: 50%;
+  width: 130px;
+  height: 35px;
   box-sizing: border-box;
   border: 2px solid #4b709a;
   border-radius: 4px;
@@ -232,8 +248,8 @@ main {
 }
 
 .search-name {
-  width: 80%;
-  height: 50%;
+  width: 180px;
+  height: 35px;
   box-sizing: border-box;
   border: 2px solid #4b709a;
   border-radius: 4px;
@@ -246,8 +262,8 @@ main {
 }
 
 .search-status {
-  width: 80%;
-  height: 50%;
+  width: 100px;
+  height: 35px;
   box-sizing: border-box;
   border: 2px solid #4b709a;
   border-radius: 4px;
@@ -265,7 +281,7 @@ main {
   font-size: 12px;
   border-radius: 4px;
   opacity: 1;
-  height: 50%;
+  height: 35px;
   margin-top: 33px;
 }
 </style>
